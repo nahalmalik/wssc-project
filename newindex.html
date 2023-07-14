@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--MY CSS-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js" integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/newstyle.css"> 
+</head>
+<body>
+  <style >
+    .width-60 {
+  width: 60%;
+}
+
+.width-40 {
+  padding-left: 5%;
+  width: 35%;
+}
+
+.width-40, .width-60 {
+  float: left;
+}
+
+#data-tables {
+  display: none;
+}
+
+#score-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.text-center {
+  text-align: center;
+}
+.average-label{
+  width: 30px;
+  height: 30px;
+  background-color: #FFA800;
+  border-radius: 100px;
+  color: white;
+  position: relative;
+}
+.average-label .average-val{
+  position: absolute;
+  top: 7px;
+  text-align: center;
+  width: 100%;
+}
+.text-circle{
+  padding: 10px;
+  border-radius: 25px;
+  background-color: #CFCFCF;
+  color: white;
+}
+.score-row{
+  height: 50px;
+  border-bottom: 1pt solid #CFCFCF;
+
+}
+.red-back{
+  background-color: #D0584F;
+}
+.green-back{
+  background-color: #9DC850;
+}
+
+  </style>
+  <!--HEADER-->
+  <section >
+  <header>
+    <div class="logo">
+      <img src="assets/img/logo.png" alt="Logo">
+    </div>
+    <div class="title">
+      <h1>Water & Sanitation Service Company Swat</h1>
+    </div>
+    <div class="logout">
+      <button class="lgn"><a href="login.html" style="text-decoration: none;color: white;">LOGOUT</a></button>
+    </div>
+  </header></section>
+  <!--SIDEBAR-->
+<section>
+  <div class="sidebar">
+
+    <button class="sidebar-button"><a href="newindex.html" style="text-decoration: none; color: white;"> HOME</button>
+      <div class="dropdown">
+  <button class="sidebar-button"class="dropbtn"> <a href="services.html" style="text-decoration: none; color: white;">SERVICES</button></a>
+</div>
+<button class="sidebar-button"> <a href="#" style="text-decoration: none; color: white;">REPORTS</button>  </a> 
+</div>
+</section>
+<!--CONTENT-->
+<main>
+<br> 
+  <h2 align="center">DASHBOARD</h2>
+  <!--boxes-->
+<section>
+  <div id="boxContainer">
+    <div class="box" id="solid-waste1">
+      <img src="assets/img/H4.png" alt="Water Supply Logo">
+      <span class="number">0</span> Water Supply System
+    </div>
+    <div class="box" id="complaints">
+      <img src="assets/img/H1.png" alt="Complaints Logo">
+      <span class="number">0</span> Total
+    </div>
+    <div class="box" id="pending">
+      <img src="assets/img/H2.png" alt="Pending Logo">
+      <span class="number">0</span> Pending
+    </div>
+    <div class="box" id="resolved">
+      <img src="assets/img/H3.png" alt="Resolved Logo">
+      <span class="number">0</span> Resolved
+    </div>
+    <br><br>
+    <div class="box" id="water-supply">
+      <img src="assets/img/H7.png" alt="Solid Waste Logo">
+      <span class="number">0</span> UnResolved
+    </div>
+  </div>
+   <div id="boxContainer1">
+    <div class="box" id="solid-waste">
+      <img src="assets/img/H5.png" alt="Solid Waste Logo">
+      <span class="number">0</span> Solid Waste System
+    </div>
+    <div class="box" id="complaints">
+      <img src="assets/img/H1.png" alt="Complaints Logo">
+      <span class="number">0</span> Total
+    </div>
+    <div class="box" id="pending">
+      <img src="assets/img/H2.png" alt="Pending Logo">
+      <span class="number">0</span> Pending
+    </div>
+    <div class="box" id="resolved">
+      <img src="assets/img/H3.png" alt="Resolved Logo">
+      <span class="number">0</span> Resolved
+    </div>
+    <br><br>
+    <div class="box" id="water-supply">
+      <img src="assets/img/H7.png" alt="Water Supply Logo">
+      <span class="number">0</span> UnResolved
+    </div>
+  </div>  
+  <div id="boxContainer2">
+    <div class="box" id="sewerage-drainage">
+      <img src="assets/img/H6.png" alt="Sewerage and Drainage Logo">
+      <span class="number">0</span> Sewerage and Drainage
+    </div>
+    <div class="box" id="complaints">
+      <img src="assets/img/H1.png" alt="Complaints Logo">
+      <span class="number">0</span> Total
+    </div>
+    <div class="box" id="pending">
+      <img src="assets/img/H2.png" alt="Pending Logo">
+      <span class="number">0</span> Pending
+    </div>
+    <div class="box" id="resolved">
+      <img src="assets/img/H3.png" alt="Resolved Logo">
+      <span class="number">0</span> Resolved
+    </div>
+    <br><br>
+    <div class="box" id="water-supply">
+      <img src="assets/img/H7.png" alt="Water Supply Logo">
+      <span class="number">0</span> UnResolved
+    </div>
+  
+  </div>
+</section>
+<!--Charts-->
+<section>
+<div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8 col-sm-12 mb-4">
+                <div class="card shadow rounded-0">
+                    <div class="card-header rounded-0">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-title flex-shrink-1 flex-grow-1">Bar Chart</div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary btn-sm rounded-0" id="generate_bar">Generate Random</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <canvas id="bar_chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12 mb-4">
+                <div class="card shadow rounded-0">
+                    <div class="card-header rounded-0">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-title flex-shrink-1 flex-grow-1">Line Chart</div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary btn-sm rounded-0" id="generate_line">Generate Random</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <canvas id="line_chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-8 col-sm-12 mb-4">
+                <div class="card shadow rounded-0">
+                    <div class="card-header rounded-0">
+                        <div class="d-flex justify-content-between">
+                            <div class="card-title flex-shrink-1 flex-grow-1">Pie Chart</div>
+                            <div class="col-auto">
+                                <button class="btn btn-primary btn-sm rounded-0" id="generate_pie">Generate Random</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="container-fluid">
+                            <canvas id="pie_chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+<!--Table
+<section>
+<div style="display: flex; justify-content: center;">
+    <table>
+      <tr>
+        <th>Over all<br>summary</th>
+        <th>Unresoved</th>
+        <th>Resolved </th>
+        <th>Pending</th>
+        <th>Closed</th>
+      </tr>
+      <tr>
+        <td>Water Supply System</td>
+         <td>Row 1, Column 2</td>
+         <td>Row 1, Column 3</td>
+        <td>Row 1, Column 4</td>
+         <td>Row 1, Column 5</td>
+      </tr>
+      <tr>
+        <td>Solid waste System</td>
+        <td>Row 2, Column 2</td>
+        <td>Row 2, Column 3</td>
+        <td>Row 2, Column 4</td>
+        <td>Row 2, Column 5</td>
+      </tr>
+      <tr>
+        <td>Sewerage & Drainage</td>
+        <td>Row 3, Column 2</td>
+        <td>Row 3, Column 3</td>
+        <td>Row 3, Column 4</td>
+        <td>Row 3, Column 5</td>
+      </tr>
+    </table>
+ 
+</section>-->
+</main>
+<!--MY SCRIPT-->
+<script src="assets/java/app.js"></script>
+<script src="assets/java/newjava.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style >
+    body {
+      margin: 0;
+      padding: 0;
+      background: rgb(0, 0, 139);
+    }
+    img{
+      margin-left: 90px;
+      margin-top: 10px;
+      height: 170px;
+    }
+    .container {
+      width: 420px;
+      margin: 100px auto;
+      background-color: #ffffff;
+      padding: 25px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #4d74e6;
+      color: #ffffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px; 
+      transition: ease 1s;
+    }
+    button:hover{
+      background-color: rgb(59, 59, 245);
+    }
+    .about{
+      background-color: white;
+      margin-left: 650px;
+       color: #ffffff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px; 
+      transition: ease 1s;
+    }
+    .about:hover{
+      background-color: rgb(59, 59, 245);
+    }
+  </style>
+</head>
+<body>
+  <h1 align="center" style="color: white">LOGIN</h1>
+  <h2 align="center" style="color: white">WELCOME TO KHKULEY SWAT</h2>
+  <div class="container">
+    <img src="assets/img/logo.png">
+  <form>
+      <label for="email"><b>Email or Password</b></label>
+      <input type="text" id="username" placeholder="Enter Email" name="email" required>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" id="password" placeholder="Enter Password" name="psw" required>
+        <button type="submit"><a href="newindex.html" style="text-decoration: none; color: white;">LOGIN</a></button>
+     <h5 align="center" style="margin-bottom: 5px;"> <a href="register.html" style="text-decoration: none;color: black;">Register with us</a><br>Having problem with login in?</h5>
+    </form>
+    </div>
+  <div><button class="about"><a style="text-decoration: none; color: black;" href="khkuleyswat.html">ABOUT</a></button></div>
+</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>sign up Page</title>
+  <style >
+    body {
+      margin: 0;
+      padding: 0;
+      background: rgb(0, 0, 139);
+    }
+    img{
+      margin-left: 85px;
+      height: 170px;
+    }
+    .container {
+      width: 420px;
+      margin: 100px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+input[type=text], input[type=password] {
+   
+   padding: 8px;
+      margin-bottom: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+button {
+  background-color: #4d74e6;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px; 
+  cursor: pointer;
+  width: 100%;
+  
+}
+
+button:hover {
+  opacity:2;
+  background-color: rgb(59, 59, 245);
+}
+
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #4d74e6;
+}
+
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+  </style>
+</head>
+<body>
+  <h1 align="center" style="color: white">SIGN UP</h1>
+  <div class="container">
+    <img src="img/logo.png">
+    <form>
+      <p>Please fill in this form to create an account.</p>
+      
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+      
+      <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+
+      <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn"><a href="newindex.html" style="text-decoration: none;color: white;">  Sign Up</button></a>
+      </div>
+    
+    </form>
+  </div>
+</body>
+</html>
